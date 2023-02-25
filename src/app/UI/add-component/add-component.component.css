@@ -1,0 +1,26 @@
+input {
+  width: 100px;
+  outline: none;
+  /* border: 0; */
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-radius: 38px 38px;
+  text-align: center;
+  padding: 2px;
+}
+input:focus {
+  outline: none;
+  border: 1px solid navy;
+  border-bottom: 3px solid rgb(0, 0, 247);
+  font-weight: bolder;
+}
+
+.add_button {
+  border: 0px;
+  padding: 10px;
+  background: white;
+  font-size: 16px;
+}
+.add_button:hover fa-icon {
+  color: rgb(255, 207, 117);
+}

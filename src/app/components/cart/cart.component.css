@@ -1,0 +1,86 @@
+img {
+  width: 150px;
+  border-radius: 10px;
+}
+
+.form-margin {
+  margin-bottom: 12px;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.cart-item-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 80px;
+}
+
+.number-input {
+  width: 80px;
+  text-align: center;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.cart-panel {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.empty-cart-message {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+}
+.parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: space-between;
+  padding: 10px;
+  margin: 20px 0;
+  gap: 10px;
+}
+.child {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: space-between;
+  padding: 10px;
+  margin: 20px 0;
+  gap: 10px;
+}
+input {
+  width: 100px;
+  outline: none;
+  /* border: 0; */
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-radius: 38px 38px;
+  text-align: center;
+  padding: 2px;
+}
+input:focus {
+  outline: none;
+  border: 1px solid navy;
+  border-bottom: 3px solid rgb(0, 0, 247);
+  font-weight: bolder;
+}
+
+.add_button {
+  border: 0px;
+  padding: 10px;
+  background: white;
+  font-size: 16px;
+}
+.add_button:hover fa-icon {
+  color: rgb(255, 207, 117);
+}

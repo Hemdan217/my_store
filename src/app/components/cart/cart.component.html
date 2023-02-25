@@ -1,0 +1,27 @@
+<h1 style="text-align:center"> Total Price {{total}}$</h1>
+<div class="parent">
+  <div>
+    <div *ngFor="let product of cartProducts" class="child" [ngStyle]="{'display':product.added != 'yes' || product.quantity==0? 'none' : 'grid' }">
+      <img src="{{product.url}}" />
+      <div class="cart-container">
+
+        <h4>{{product.name}}</h4>
+        <h5>{{product.price}}$</h5>
+        <h6>{{product.quantity}}</h6>
+        <div>
+
+          <input type="number" min=0 value={{product.quantity}} (input)="product.quantity=getValue($event)" [value]="product.quantity" (change)="updateQuantity(product,getValue($event))" />
+
+          <button class="add_button" [ngStyle]="{'color':product.added === 'yes' ? '#28a745' : 'red' }">
+            <fa-icon [icon]="faShoppingCart"></fa-icon>
+          </button>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    ffj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ldx;dl
+  </div>
+</div>

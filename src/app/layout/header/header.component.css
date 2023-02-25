@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  background: rgb(93, 143, 159);
+  background: linear-gradient(
+    90deg,
+    rgba(93, 143, 159, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  color: #fff;
+  padding: 30px;
+  margin: -8px -8px 40px -8px;
+  align-items: center;
+}
+
+a {
+  color: #ffffff;
+  font-size: medium;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.1s;
+}
+a:hover {
+  color: rgba(255, 222, 173, 0.566);
+}
+a:active {
+  color: cadetblue;
+}
+div.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 28px;
+}

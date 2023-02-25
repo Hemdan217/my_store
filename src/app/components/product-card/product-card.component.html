@@ -1,0 +1,32 @@
+   <div class="product-container">
+     <div class="product-details">
+       <img src={{product.url}} alt="" class="image">
+
+
+       <span>
+         {{ product.name.length > 30 ? product.name.substring(0, 30) :product.name}}
+       </span>
+       <h4>
+         {{ product.price }}$
+       </h4>
+
+       <span class="icon">
+         <fa-icon [icon]="faShippingFast"></fa-icon> Free Shipping
+       </span>
+       <span class="icon">
+         <fa-icon [icon]="faGift"></fa-icon> Free Gift
+       </span>
+
+       <a class="nav-link" [routerLink]="['/products',product.id ]">View Details</a>
+       <div style="text-align:center">
+         <input type="number" min=0 value={{product.quantity}} [value]="product.quantity" (input)="product.quantity=getValue($event)" (change)="updateQuantity(getValue($event))" />
+         <button class="add_button" (click)="addToCart(product,product.quantity)" [ngStyle]="{'color':product.added === 'yes' ? '#28a745' : 'red' }">
+           <fa-icon [icon]="faShoppingCart"></fa-icon>
+         </button>
+
+
+       </div>
+     </div>
+
+
+   </div>

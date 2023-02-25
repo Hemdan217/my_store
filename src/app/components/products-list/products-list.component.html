@@ -1,0 +1,17 @@
+<div class="search-here">
+  <input [(ngModel)]="term" class="search" placeholder="Search Here " type="search" />
+
+</div>
+<div class="products_container">
+  <div *ngFor="let product of products |filter:term">
+    <app-product-card [product]="product"></app-product-card>
+  </div>
+
+
+
+</div>
+
+<div class="page">
+  <a *ngFor=" let n of [1,2,3,4,5]" class="page_id" [routerLink]="['/page', n]" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" (click)="updatePage(n)">{{n === page? '@':n}}</a>
+
+</div>

@@ -1,0 +1,32 @@
+    <div class="detail-container">
+
+      <img src={{product.url}} alt="" class="image">
+      <div class="detail-item">
+        <h1>
+          {{ product.name }}
+        </h1>
+        <h3>
+          {{ product.price }}$
+        </h3>
+
+        <div style="text-align:center">
+          <input type="number" min=0 value={{product.quantity}} [value]="product.quantity" (input)="product.quantity=getValue($event)" (change)="updateQuantity(getValue($event))" />
+          <button class="add_button" (click)="addToCart(product,product.quantity)" [ngStyle]="{'color':product.added === 'yes' ? '#28a745' : 'red' }">
+            <fa-icon [icon]="faShoppingCart"></fa-icon>
+          </button>
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+    <div class="parent-info">
+      <div class="info" *ngFor="let property of product.description | keyvalue">
+        <div>{{property.key}}:</div>
+        <div>{{property.value}}</div>
+      </div>
+    </div>
