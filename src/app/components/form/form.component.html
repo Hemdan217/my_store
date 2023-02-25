@@ -1,0 +1,30 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()" class="confirmation-container">
+  <label>Full Name</label>
+  <input placeholder="Hemdan Khalifa" type="text" name="name" required minlength="6" [(ngModel)]="name" #userName="ngModel">
+  <span *ngIf="userName.invalid && userName.dirty" style="color: red;margin: -13px;
+   
+    font-size: 14px;"> Please Valid Name Make Sure that it has 6 letters at least
+
+  </span>
+  <label>Address</label>
+  <input placeholder="Fowa, Egypt" type="text" name="address" required minlength="10" [(ngModel)]="address" #userAddress="ngModel">
+  <span *ngIf="userAddress.invalid && userAddress.dirty" style="color: red;margin: -13px;
+    font-size: 14px;"> Please Valid Address Make Sure that it has 10 letters at least
+  </span>
+
+
+
+
+  <label>Credit Card</label>
+  <input name="card" required maxlength="19" placeholder="xxxx xxxx xxxx xxxx" [(ngModel)]="card" #userCard="ngModel" type="tel" inputmode="numeric" pattern="[0-9\s]{19}">
+  <span *ngIf="userCard.invalid && userCard.dirty" style="color: red;margin: -13px;
+    font-size: 14px;"> Please Valid Credit Card Make
+  </span>
+
+  <button type="submit" [disabled]="form.invalid || total ==0" (click)="makeOrder(userName.value)">Submit</button>
+</form>
+
+<div>
+
+
+</div>

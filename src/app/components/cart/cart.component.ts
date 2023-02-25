@@ -10,8 +10,14 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 export class CartComponent {
   faShoppingCart = faShoppingCart;
   total: number = 0;
-
+  message: string = '';
   cartProducts: Product[] = [];
+
+  userInfo = {
+    name: '',
+    address: '',
+    total: 0,
+  };
   constructor(private CartService: CartService) {}
   ngOnInit(): void {
     this.cartProducts = this.CartService.getcartProducts();
@@ -19,6 +25,11 @@ export class CartComponent {
       this.total += product.price * product.quantity;
     });
     this.total = Math.round(this.total);
+  }
+  ngDoCheck(): void {
+    //Called every time that the input properties of a component or a directive are checked. Use it to extend change detection by performing a custom check.
+    //Add 'implements DoCheck' to the class.
+    this.cartProducts = this.CartService.getcartProducts();
   }
   getValue(event: Event): number {
     this.cartProducts = this.CartService.getcartProducts();
@@ -31,6 +42,15 @@ export class CartComponent {
   }
 
   updateQuantity(product: Product, quantity: number) {
+    if (quantity == 0) {
+      this.message = 'Removed From Cart';
+    }
     this.cartProducts = this.CartService.updateQuantity(product, quantity);
+  }
+  makeOrder(userName: string) {
+    this.userInfo.name = userName;
+    this.userInfo.total = this.total;
+    this.CartService.confirmOrder(this.userInfo.name, this.userInfo.total);
+    console.log(this.userInfo);
   }
 }

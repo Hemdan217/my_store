@@ -101,3 +101,30 @@ input:focus {
 .add_button:hover fa-icon {
   color: rgb(255, 207, 117);
 }
+.message {
+  position: fixed;
+  top: 100px;
+  left: -400px;
+  background: #4776ff;
+  padding: 20px;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+
+  animation: show_message 4s;
+}
+@keyframes show_message {
+  0% {
+    left: -400px;
+  }
+
+  20% {
+    left: 100px;
+    background: #0040ff;
+  }
+
+  100% {
+    display: none;
+    left: -400px;
+  }
+}

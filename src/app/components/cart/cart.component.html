@@ -5,9 +5,9 @@
       <img src="{{product.url}}" />
       <div class="cart-container">
 
-        <h4>{{product.name}}</h4>
-        <h5>{{product.price}}$</h5>
-        <h6>{{product.quantity}}</h6>
+        <h4>Name :{{product.name}}</h4>
+        <h5>Price :{{product.price}}$</h5>
+        <h6>Quantity :{{product.quantity}}</h6>
         <div>
 
           <input type="number" min=0 value={{product.quantity}} (input)="product.quantity=getValue($event)" [value]="product.quantity" (change)="updateQuantity(product,getValue($event))" />
@@ -21,7 +21,8 @@
       </div>
     </div>
   </div>
-  <div>
-    ffj;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ldx;dl
+  <div class="form">
+    <app-form [total]="total" (newOrder)="makeOrder($event)"></app-form>
   </div>
 </div>
+<span class="message" [ngStyle]="{'display':message.length === 0 ? 'none' : 'block' }">{{message}}</span>

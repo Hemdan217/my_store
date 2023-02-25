@@ -14,6 +14,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { AddComponentComponent } from './UI/add-component/add-component.component';
 import { CartComponent } from './components/cart/cart.component';
+import { FormComponent } from './components/form/form.component';
+import { SuccessComponent } from './components/success/success.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,8 @@ import { CartComponent } from './components/cart/cart.component';
     ProductItemDetailComponent,
     AddComponentComponent,
     CartComponent,
+    FormComponent,
+    SuccessComponent,
   ],
   imports: [
     BrowserModule,

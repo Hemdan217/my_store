@@ -14,9 +14,4 @@ export class ProductsService {
   getProductDetails(id: string): Observable<Product> {
     return this.http.get<Product>(`http://localhost:3000/products/${id}`);
   }
-  // getPosts() {
-  //   return this.http.get<Post[]>(
-  //     'https://jsonplaceholder.typicode.com/posts?_limit=8'
-  //   );
-  // }
 }

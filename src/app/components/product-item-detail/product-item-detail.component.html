@@ -17,6 +17,9 @@
 
 
         </div>
+        <a class="nav-link" [routerLink]="['/' ]">
+          <fa-icon [icon]="  faArrowLeft"></fa-icon>Back to Home
+        </a>
       </div>
 
 
@@ -30,3 +33,4 @@
         <div>{{property.value}}</div>
       </div>
     </div>
+    <span class="message" [ngStyle]="{'display':message.length === 0 ? 'none' : 'block' }">{{message}}</span>

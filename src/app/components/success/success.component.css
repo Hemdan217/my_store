@@ -1,0 +1,23 @@
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 65vh;
+  max-height: 85vh;
+}
+.confirmation div {
+  text-align: center;
+  font-size: 30px;
+}
+.nav-link {
+  text-decoration: none;
+  display: block;
+  width: 400px;
+  margin: 20px auto;
+  background: aquamarine;
+  text-align: center;
+  color: black;
+  padding: 20px;
+  font-weight: bold;
+  border-radius: 50px;
+}

@@ -1,0 +1,17 @@
+<div class="confirmation">
+
+  <div>
+    Thank you, <fa-icon [icon]="faCheck"></fa-icon><b>
+      {{userInfo.name}}</b>
+  </div>
+  <div>
+    Your <b>$
+      {{userInfo.total}}</b> order is confirmed!
+  </div>
+  <div>
+    Please allow 1-3 business day(s) for shipping.
+  </div>
+  <a class="nav-link" [routerLink]="['/' ]">
+    <fa-icon [icon]="faArrowLeft" (click)="clearAll()"></fa-icon>Back to Home
+  </a>
+</div>

@@ -4,6 +4,7 @@ import { CartService } from '../../services/cart.service';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../../models/productModel';
 import { ProductsService } from '../../services/products.service';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-product-item-detail',
   templateUrl: './product-item-detail.component.html',
@@ -13,6 +14,9 @@ export class ProductItemDetailComponent {
   id: any;
   product: Product;
   faShoppingCart = faShoppingCart;
+
+  faArrowLeft = faArrowLeft;
+  message: string = '';
   cartProducts: Product[] = [];
   constructor(
     private route: ActivatedRoute,
@@ -36,11 +40,17 @@ export class ProductItemDetailComponent {
         this.product = data;
       }
     );
+  }
+  ngDoCheck(): void {
+    //Called every time that the input properties of a component or a directive are checked. Use it to extend change detection by performing a custom check.
+    //Add 'implements DoCheck' to the class.
     this.cartProducts = this.CartService.getcartProducts();
-    this.cartProducts.map((product) => {
-      this.product.added = this.product.id === product.id ? 'yes' : 'no';
-      this.product.quantity = product.quantity;
-    });
+    this.cartProducts
+      .filter((prod) => prod.id === this.product.id)
+      .map((product) => {
+        this.product.added = 'yes';
+        this.product.quantity = product.quantity;
+      });
   }
   getValue(event: Event): number {
     return parseInt((event.target as HTMLInputElement).value);
@@ -50,6 +60,7 @@ export class ProductItemDetailComponent {
     this.cartProducts = this.CartService.updateQuantity(this.product, quantity);
   }
   addToCart(product: Product, quantity: number) {
+    this.message = `${product.name} was added to cart`;
     this.cartProducts = this.CartService.addToCart(product, quantity);
   }
 }

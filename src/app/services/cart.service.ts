@@ -5,6 +5,13 @@ import { Product } from '../models/productModel';
 })
 export class CartService {
   cartProducts: Product[] = [];
+
+  userInfo = {
+    name: '',
+    address: '',
+    total: 0,
+  };
+
   getcartProducts() {
     return this.cartProducts;
   }
@@ -25,13 +32,38 @@ export class CartService {
       });
     if (quantity == 0) {
       product.added = 'no';
+      this.removeProduct(product);
     }
     return this.cartProducts;
   }
-
-  clearCart() {
-    this.cartProducts = [];
+  removeProduct(product: Product) {
+    this.cartProducts = this.cartProducts.filter(
+      (prod) => prod.id != product.id
+    );
     return this.cartProducts;
   }
+  confirmOrder(name: string, total: number) {
+    this.userInfo.name = name;
+    this.userInfo.total = total;
+    return this.userInfo;
+  }
+  getUserInfo() {
+    return this.userInfo;
+  }
+  clearCart() {
+    this.cartProducts = [];
+
+    return this.cartProducts;
+  }
+  clearUser() {
+    this.userInfo = {
+      name: '',
+      address: '',
+      total: 0,
+    };
+
+    return this.userInfo;
+  }
+
   constructor() {}
 }
