@@ -9,15 +9,6 @@
 3. npm run start
 4. npm run build
 
-# First
-
-You should run this command to install all the dependencies needed for this application
-
-```
-npm i
-
-```
-
 # Instructions
 
 1. Download My Store Files
@@ -26,6 +17,15 @@ npm i
 4. `npm run server` script to run json-server backend server using ./src/assets/data.json file `http://localhost:3000/products`
 5. in another tap run `ng serve` to run frontend server `http://localhost:4200/`
 6. enjoy the project!
+
+# First
+
+You should run this command to install all the dependencies needed for this application
+
+```
+npm i
+
+```
 
 # Backend server Setup :
 
