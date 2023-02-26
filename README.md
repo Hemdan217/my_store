@@ -18,6 +18,15 @@ npm i
 
 ```
 
+# Instructions
+
+1. Download My Store Files
+2. cd into the my_store-main directory usng `cd my_store-main`
+3. install all the dependencies needed for this application `npm install`
+4. `npm run server` script to run json-server backend server using ./src/assets/data.json `http://localhost:3000/products`
+5. in another tap run `ng serve` to run frontend server `http://localhost:4200/`
+6. enjoy the project!
+
 # Backend server Setup :
 
 I depend to build backend server on json-server which provides REST API using data.json (which is attached in src/assets/data.json).
