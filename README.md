@@ -48,6 +48,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## brief of usage and Routes
 
+```
 [
 { path: 'home', component: ProductsListComponent },
 { path: 'cart', component: CartComponent },
@@ -56,23 +57,24 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 { path: 'products/:id', component: ProductItemDetailComponent },
 { path: '', redirectTo: '/page/1', pathMatch: 'full' },
 ];
+```
 
-1. home page `http://localhost:4200/home`
+1. `home` page `http://localhost:4200/home`
    to view all the products there are some features you can search for specific product,add to cart
 
    ![Screenshot](./screenShots/Searching_for_home.png)
 
-2. products splitted into 5 pages `http://localhost:4200/page/:id` with the same features in home page
+2. `products` splitted into 5 pages `http://localhost:4200/page/:id` with the same features in home page
 
 ![Screenshot](./screenShots/pagination.png)
 
 ![Screenshot](./screenShots/Adding_Product_to_cart.png)
 
-3. product details page to view all the product details `http://localhost:4200/products/:id` with the adding it to cart option
+3. `product details` page to view all the product details `http://localhost:4200/products/:id` with the adding it to cart option
 
    ![Screenshot](./screenShots/Adding_Product_to_car_2.png)
 
-4. cart page `http://localhost:4200/cart` to view all the products added to cart , you can remove an product from cart
+4. `cart` page `http://localhost:4200/cart` to view all the products added to cart , you can remove an product from cart
    if you want to confirm the order, you should fill in confirmation form with following information
    name (should have at least 6 letters)
    address (should have at least 10 letters)
@@ -86,7 +88,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
    ![Screenshot](./screenShots/Searching_for_home.png)
 
-5. After finishing the confirmation process you will redirect to success page `http://localhost:4200/success`
+5. After finishing the confirmation process you will redirect to `success` page `http://localhost:4200/success`
 
    ![Screenshot](./screenShots/Done.png)
 
