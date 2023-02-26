@@ -59,12 +59,19 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 1. home page `http://localhost:4200/home`
    to view all the products there are some features you can search for specific product,add to cart
+
    ![Screenshot](./screenShots/Searching_for_home.png)
+
 2. products splitted into 5 pages `http://localhost:4200/page/:id` with the same features in home page
-   ![Screenshot](./screenShots/pagination.png)
-   ![Screenshot](./screenShots/Adding_Product_to_cart.png)
+
+![Screenshot](./screenShots/pagination.png)
+
+![Screenshot](./screenShots/Adding_Product_to_cart.png)
+
 3. product details page to view all the product details `http://localhost:4200/products/:id` with the adding it to cart option
+
    ![Screenshot](./screenShots/Adding_Product_to_car_2.png)
+
 4. cart page `http://localhost:4200/cart` to view all the products added to cart , you can remove an product from cart
    if you want to confirm the order, you should fill in confirmation form with following information
    name (should have at least 6 letters)
@@ -72,11 +79,15 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
    credit card (Should be a valid credit with the same pattern like this `1212 1231 3337 5220`).
    any worng input will be handled by error message to fix this.
    sure the confirmation can't be done if there is any mistake or no product in the cart
+
    ![Screenshot](./screenShots/Cart.png)
+
    ![Screenshot](./screenShots/empty_cart.png)
+
    ![Screenshot](./screenShots/Searching_for_home.png)
 
 5. After finishing the confirmation process you will redirect to success page `http://localhost:4200/success`
+
    ![Screenshot](./screenShots/Done.png)
 
 Enjoy
